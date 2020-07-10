@@ -1336,6 +1336,9 @@ p {
     .row.gtr-200.gtr-uniform>* {
         padding-top: 60px;
     }
+    #techUsed ul li {
+        padding: 10rem;
+    }
 }
 
 @media screen and (max-width: 736px) {
@@ -3003,7 +3006,7 @@ button.small,
 .techUsed li {
     display: inline;
     border: 1px solid;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 3px 5px 3px 5px;
     margin: 3px 5px 3px 5px;
     background-color: #1eb8fb;
