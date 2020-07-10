@@ -2486,8 +2486,19 @@ button.small,
 
 /* Wrapper */
 
+
+/* Top, middle, bottom wrappers */
+
 .wrapper {
     padding: 5em 0 3em 0;
+}
+
+.wrapper.top {
+    padding: 5em 0 3em 0;
+}
+
+.wrapper.other {
+    padding: 0 0 3em 0;
 }
 
 .wrapper.style1 {
