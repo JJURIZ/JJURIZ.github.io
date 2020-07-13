@@ -1361,9 +1361,6 @@ p {
     .row.gtr-200.gtr-uniform>* {
         padding-top: 60px;
     }
-    #techUsed ul li {
-        padding: .1em .1em .1em .1em;
-    }
 }
 
 @media screen and (max-width: 736px) {
@@ -1552,9 +1549,6 @@ p {
     }
     .row.gtr-200.gtr-uniform>* {
         padding-top: 40px;
-    }
-    #techUsed ul li {
-        padding: .1em .1em .1em .1em;
     }
 }
 
@@ -1745,8 +1739,8 @@ p {
     .row.gtr-200.gtr-uniform>* {
         padding-top: 40px;
     }
-    #techUsed ul li {
-        padding: .1em .1em .1em .1em;
+    .techUsed li {
+        margin: 0 0 0 0;
     }
 }
 
@@ -2101,9 +2095,6 @@ ul.actions.fit.stacked {
     ul.actions:not(.fixed) li button.icon:before,
     ul.actions:not(.fixed) li .button.icon:before {
         margin-left: -0.5em;
-    }
-    #techUsed ul li {
-        margin: .1em .1em .1em .1em;
     }
 }
 
@@ -2929,8 +2920,8 @@ button.small,
         -ms-transform: translateX(0);
         transform: translateX(0);
     }
-    #techUsed ul li {
-        margin: .1em .1em .1em .1em;
+    .techUsed li {
+        margin: 0 0 0 0;
     }
 }
 
@@ -2987,9 +2978,6 @@ button.small,
     .wrapper {
         padding: 2em 0 1px 0;
     }
-    #techUsed ul li {
-        margin: .1em .1em .1em .1em;
-    }
 }
 
 
@@ -3045,7 +3033,10 @@ button.small,
         padding: 2em 20px;
         text-align: left;
     }
-    #techUsed ul li {
-        padding: .1em .1em .1em .1em;
+    .techUsed li {
+        margin: 0 0 0 0;
+    }
+    .liveViews {
+        margin-left: 1em;
     }
 }
