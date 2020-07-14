@@ -5,6 +5,7 @@
     <title>Jeremy Uriz Portfolio-Software</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/carousel.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </head>
@@ -69,8 +70,42 @@
                                     <h2 id="wordScrambleGame">Word Scramble Game</h2>
                                     <p>A look at several personal coding projects I've created recently.</p>
                                 </header>
+                                <!-- Word Scramble Game slideshow container -->
+                                <div class="slideshow-container">
 
-                                <span class="image featured"><img src="images/tinyCode_funWithArrays-1.png" alt="Word Scramble Game" /></span>
+                                    <!-- Full-width images with number and caption text -->
+                                    <div class="mySlides1 fade">
+                                        <img src="images/tinyCode_funWithArrays-1.png" style="width:100%">
+                                    </div>
+
+                                    <div class="mySlides1 fade">
+                                        <img src="images/tinyCode_funWithArrays-2.jpg" style="width:100%">
+                                    </div>
+
+                                    <div class="mySlides1 fade">
+                                        <img src="images/tinyCode_funWithArrays-3.jpg" style="width:100%">
+                                    </div>
+
+                                    <div class="mySlides1 fade">
+                                        <img src="images/tinyCode_funWithArrays-4.jpg" style="width:100%">
+                                    </div>
+
+                                    <!-- Next and previous buttons -->
+                                    <a class="prev" onclick="plusSlides(-1,0)">&#10094;</a>
+                                    <a class="next" onclick="plusSlides(1,0)">&#10095;</a>
+                                </div>
+                                <br>
+
+                                <!-- The dots/circles -->
+                                <div style="text-align:center">
+                                    <span class="dot" onclick="currentSlide(1)"></span>
+                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                    <span class="dot" onclick="currentSlide(3)"></span>
+                                    <span class="dot" onclick="currentSlide(4)"></span>
+                                </div>
+
+                                <!-- Word Scramble game slideshow End -->
+
                                 <ul class="icons">
                                     <li class="liveViews"><a href="https://github.com/JJURIZ/tinyCode_FunWithArrays" class="icon brands fa-github" target="blank"><span class="label">GitHub</span></a></li>
                                     <li><a href="https://funwitharrays.netlify.app/" class="icon brands" target="blank"><span class="iconify" data-icon="logos-netlify" data-inline="true">Live</span></a></li>
@@ -108,7 +143,34 @@
                                     <p>The final project for <a href="https://ccalearn.tech/">Code Career Academy's</a> frontend developer course. All focus was placed on backend functionality, with Bootstrap providing bare-bones style. </p>
                                 </header>
 
-                                <span class="image featured"><img src="images/CCABlog.jpg" alt="CCA Blog Homepage" /></span>
+                                <!-- CCA Blog Assignment slideshow container -->
+                                <div class="slideshow-container">
+
+                                    <!-- Full-width images with number and caption text -->
+                                    <div class="mySlides2 fade">
+                                        <img src="images/CCABlog.jpg" style="width:100%">
+                                        <div class="text">CCA Blog Home Page</div>
+                                    </div>
+
+                                    <div class="mySlides2 fade">
+                                        <img src="images/CCABlog-2.jpg" style="width:100%">
+                                        <div class="text">CCA Blog - Creating a Post</div>
+                                    </div>
+
+                                    <!-- Next and previous buttons -->
+                                    <a class="prev" onclick="plusSlides(-1,1)">&#10094;</a>
+                                    <a class="next" onclick="plusSlides(1,1)">&#10095;</a>
+                                </div>
+                                <br>
+
+                                <!-- The dots/circles -->
+                                <div style="text-align:center">
+                                    <span class="dot" onclick="currentSlide(1)"></span>
+                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                </div>
+
+                                <!-- CCA Blog Assignment slideshow End -->
+
                                 <ul class="icons">
                                     <li class="liveViews"><a href="https://github.com/JJURIZ/cca02_final_blog_project" class="icon brands fa-github" target="blank"><span class="label">GitHub</span></a></li>
                                 </ul>
@@ -175,6 +237,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/carousel.js"></script>
 
 </body>
 
