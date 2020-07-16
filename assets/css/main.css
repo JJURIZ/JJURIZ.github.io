@@ -1762,7 +1762,7 @@ header p {
 
 header.major {
     text-align: center;
-    margin: 0 0 2em 0;
+    margin: 0 0 1em 0;
 }
 
 header.major h2 {
@@ -1771,7 +1771,6 @@ header.major h2 {
 
 header.major p {
     position: relative;
-    border-top: solid 1px #e0e0e0;
     padding: 1em 0 0 0;
     margin: 0;
     top: -1em;
@@ -2281,6 +2280,7 @@ button.small,
 #header h1 {
     padding: 0 0 2.75em 0;
     margin: 0;
+    font-size: 2rem;
 }
 
 #header h1 a {
@@ -2485,7 +2485,7 @@ button.small,
     background-color: #fff;
     background-image: url("images/bg02.png"), url("images/bg03.png"), url("images/bg01.png");
     background-position: top left, bottom left, top left;
-    background-size: 100% 6em, 100% 6em, auto;
+    background-size: 100% 1em, 100% 1em, auto;
     background-repeat: no-repeat, no-repeat, repeat;
 }
 
@@ -3039,4 +3039,8 @@ button.small,
     .liveViews {
         margin-left: 1em;
     }
+}
+
+nav ul li a {
+    font-size: 2rem;
 }
