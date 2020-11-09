@@ -2,14 +2,17 @@
 
 /****************VARIABLES****************/
 
-
 const num1 = document.getElementById('num1'),
       operator = document.getElementById('operator'),
       num2 = document.getElementById('num2'),
+      equals = document.getElementById("equals"),
       num3 = document.getElementById('num3'),
       answer = document.getElementById("answer"),
 
-      level = document.getElementById("level_value"),
+      roundCountdownDiv = document.querySelector(".round_countdown"),
+      mathroundContainer =  document.getElementById("mathround_container"),
+
+      round = document.getElementById("round_value"),
       timerLabel = document.getElementById("timer"),
       timeRemaining = document.getElementById("time_remaining"),
       playerScore = document.getElementById("player_points"),
@@ -23,19 +26,22 @@ let value1,
     value2,
     value3,
     operatorValue,
-    divisionSwitch = true,
+
     minDifficultyLevelAddSub = 0,
     maxDifficultyLevelAddSub = 10,
-    minDifficultyLevelMultiply = 0,
-    maxDifficultyLevelMultiply = 6,
+    minDifficultyMultiplyDivide = 0,
+    maxDifficultyMultiplyDivide = 6,
+
     computerAnswer,
     userAnswer,
-    levelNumber = 20,
+    roundNumber = 6,
     points = 0,
-    timer = 31;
+    timer = 31,
+    roundCountdown = 3;
 
 
 /****************ARRAYS****************/
+
 let answerArray = [],
     questionArray = [],
     isCorrectArray = [],
@@ -43,47 +49,51 @@ let answerArray = [],
 
 
 /****************FUNCTIONS****************/
+
 /*RANDOM NUMBER GENERATOR*/
 const randy = (max, min) => {
-    min = Math.ceil(min);
     max = Math.floor(max);
+    min = Math.ceil(min);
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-/*OPERATOR FUNCTIONS*/
+/*OPERATOR FUNCTIONS (ADD, SUBTRACT, MULTIPLY, DIVIDE)*/
+
 const add = () => {
-    value3 = randy(minDifficultyLevelAddSub, maxDifficultyLevelAddSub);
-    value1 = randy(minDifficultyLevelAddSub+1 , value3);
+    value3 = randy(maxDifficultyLevelAddSub, minDifficultyLevelAddSub);
+    console.log(value3)
+    value1 = randy(value3, minDifficultyLevelAddSub+1);
+    console.log(value1)
     value2 = value3 - value1;
     operatorValue = '+';
     computerAnswer = value3;
 }
 
 const subtract = () => {
-    value3 = randy(minDifficultyLevelAddSub, maxDifficultyLevelAddSub);
-    value2 = randy(minDifficultyLevelAddSub, value3+1);
+    value3 = randy(maxDifficultyLevelAddSub, minDifficultyLevelAddSub);
+    value2 = randy(value3+1, minDifficultyLevelAddSub);
     value1 = value3 + value2;
     operatorValue = '-';
     computerAnswer = value3;
 }
 
 const multiply = () => {
-    value1 = randy(minDifficultyLevelMultiply, maxDifficultyLevelMultiply);
+    value1 = randy(maxDifficultyMultiplyDivide, minDifficultyMultiplyDivide);
     operatorValue = 'X';
-    value2 = randy(minDifficultyLevelMultiply, maxDifficultyLevelMultiply);
+    value2 = randy(maxDifficultyMultiplyDivide, minDifficultyMultiplyDivide);
     value3 = value1 * value2;
     computerAnswer = value3;
 }
 
 const divide = () => {
-    value2 = randy(minDifficultyLevelMultiply,10);
-    value3 = randy(minDifficultyLevelMultiply,10);
+    value2 = randy(maxDifficultyMultiplyDivide, minDifficultyMultiplyDivide);
+    value3 = randy(maxDifficultyMultiplyDivide, minDifficultyMultiplyDivide);
     value1 = value3 * value2;
     operatorValue = '/';
     computerAnswer = value3;
 }
 
-let operatorArray = [add, subtract, multiply, divide];
+let operatorArray = [add, subtract, multiply, divide]; // Adds each function to an array in order to allow specific or random operators in a round //
 
 /*DOES USER ANSWER MATCH COMPUTER ANSWER?*/
 const checkAnswer = () => {
@@ -101,40 +111,59 @@ const gameOver = () => {
 }
 
 /*ASSIGNS OPERATIONS BASED ON CURRENT LEVEL*/
-const levelPicker = () => {
-    if (levelNumber === 1) {
+const roundPicker = () => {
+    if (roundNumber === 1) {
         return operatorArray[0]();
-    } else if (levelNumber === 2) {
+    } else if (roundNumber === 2) {
         return operatorArray[1]();
-    } else if (levelNumber === 3) {
+    } else if (roundNumber === 3) {
         return operatorArray[2]();
-    } else if (levelNumber === 4) {
+    } else if (roundNumber === 4) {
         return operatorArray[3]();
-    } else if (levelNumber === 5) {
+    } else if (roundNumber === 5) {
         return operatorArray[randy(0,2)]();
-    } else if (levelNumber === 6) {
+    } else if (roundNumber === 6) {
         return operatorArray[randy(2,4)]();
-    } else if (levelNumber > 6) {
+    } else if (roundNumber > 6) {
         return operatorArray[randy(0,4)]();
-
     }
 }
 
 /*GENERATE A NEW PROBLEM FOR PLAYER */
 const generateProblem = () => {
-    levelPicker();
+    roundPicker();
     num1.textContent = value1;
     operator.textContent = operatorValue;
     num2.textContent = value2;
+    equals.textContent = `=`;
     questionArray.push(`${value1} ${operatorValue} ${value2} = ${value3}`);
     checkAnswer;
 }
 
-/*CLEAR PROBLEM SO NEXT ONE CAN APPEAR*/
+/*CLEAR PROBLEM TEXT CONTENT*/
 const clearProblem = () => {
     num1.textContent = '';
     operator.textContent = '';
     num2.textContent = '';
+    equals.textContent = '';
+}
+
+/*HIDE MATHROUND CONTAINER*/
+const hideProblemContainers = () => {
+    num1.classList.add("hidden");
+    operator.classList.add("hidden");
+    num2.classList.add("hidden");
+    num3.classList.add("hidden");
+    answer.classList.add("hidden");
+}
+
+/*SHOW MATHROUND CONTAINER*/
+const showProblemContainers = () => {
+    num1.classList.remove("hidden");
+    operator.classList.remove("hidden");
+    num2.classList.remove("hidden");
+    num3.classList.remove("hidden");
+    answer.classList.remove("hidden");
 }
 
 /*GAME TIMER*/
@@ -147,80 +176,120 @@ const startTimer = () => {
             timeRemaining.textContent = ` Time's Up!`;
             clearInterval(countdown)
             clearProblem();
+            hideProblemContainers();
+            setTimeout(function() {
+                startButton.classList.remove("hidden");
+                timeRemaining.textContent = ``;
+            }, 3000);
+            answer.disabled = true;
+            answer.innerText = '';
             timer = 31;
         }
 
         if (timer < 31 && timer >= 20) {
             timeRemaining.classList.add("green_time");
+            answer.style.borderColor = "green";
         }
 
         if (timer <= 19 && timer >= 11) {
             timeRemaining.classList.remove("green_time");
             timeRemaining.classList.add("black_time");
+            answer.style.borderColor = "black";
         }
 
         if (timer === 10 ){
             timeRemaining.classList.remove("black_time");
             timeRemaining.classList.add("red_time");
+            answer.style.borderColor = "red";
         } 
-         
-        if (timer === 0) {
-            setTimeout(function() {startButton.classList.remove("hidden")}, 5000);
-            answer.disabled = true;
-        }
 
         if (points === 101) {
             clearInterval(countdown);
-            timerLabel.textContent = `${timeRemaining.textContent = `Game Over!`}`;
+            roundCountdownDiv.classList.remove("hidden");
+            hideProblemContainers();
+            roundCountdownDiv.innerText = "Game Over. You Win!"
             gameOver();
         }
+
+        if (roundNumber === 26 && points < 101) {
+            clearInterval(countdown);
+            roundCountdownDiv.classList.remove("hidden");
+            hideProblemContainers();
+            roundCountdownDiv.innerText = "Better Luck Next Time!"
+            gameOver();
+        }
+    
     }, 1000);
 }
 
 /*ADJUSTS DIFFICULTY (I.E. AS LEVEL INCREASES, OPERAND VALUES INCREASE)*/
-const difficultyLevel = (level) => {
-    if (level === 8) {
+const difficultyLevel = (round) => {
+    if (round === 8) {
         minDifficultyLevelAddSub = 2;
         maxDifficultyLevelAddSub = 15;
-        minDifficultyLevelMultiply = 2;
-        maxDifficultyLevelMultiply = 9;
-    } else if (level === 13) {
+        minDifficultyMultiplyDivide = 2;
+        maxDifficultyMultiplyDivide = 9;
+    } else if (round === 13) {
         minDifficultyLevelAddSub = 5;
         maxDifficultyLevelAddSub = 15;
-        minDifficultyLevelMultiply = 4;
-        maxDifficultyLevelMultiply = 11;
-    } else if (level === 20) {
+        minDifficultyMultiplyDivide = 4;
+        maxDifficultyMultiplyDivide = 11;
+    } else if (round === 19) {
         minDifficultyLevelAddSub = 7;
         maxDifficultyLevelAddSub = 30;
-        minDifficultyLevelMultiply = 6;
-        maxDifficultyLevelMultiply = 15;
+        minDifficultyMultiplyDivide = 6;
+        maxDifficultyMultiplyDivide = 15;
     }
 }
 
-difficultyLevel(levelNumber);
+/*START ROUND*/
+let startRoundTimer = function() {
+    let roundTimer = setInterval(function() {
+        roundCountdownDiv.innerText = roundCountdown;
+        roundCountdown -=1;
 
+    if (roundCountdown === -1) {
+        roundCountdownDiv.innerText = `GO!`;
+    }
+
+    if (roundCountdown === -2) {
+        clearInterval(roundTimer);
+        roundCountdownDiv.innerText = ``;
+        roundCountdownDiv.classList.add("hidden");
+        showProblemContainers();
+        answer.disabled = false;
+        roundNumber += 1;
+        round.innerText = roundNumber;
+        timeRemaining.classList.remove("red_time");
+        timeRemaining.classList.add("green_time");
+        startTimer();
+        generateProblem();
+    }
+}, 1000)
+};
 
 /****************EVENT LISTENERS****************/
-/*CLICK EVENT FOR START BUTTON*/
+
+/*START A NEW ROUND*/
 startButton.addEventListener("click", function(){
-    startButton.classList.add("hidden")
-    answer.disabled = false;
-    levelNumber += 1;
-    level.innerText = levelNumber;
-    timeRemaining.classList.remove("red_time");
-    timeRemaining.classList.add("green_time");
-    startTimer();
-    generateProblem();
-    console.log(levelNumber)
+    roundCountdown = 3;
+    difficultyLevel(roundNumber);
+    answer.style.borderColor = "green";
+    timer = 31; // COULD CREATE A CONSTANT IF I WANT A CONSISTENT RESET
+
+    if (roundCountdown === 3) {
+        startButton.classList.add("hidden");
+        roundCountdownDiv.classList.remove("hidden");
+        hideProblemContainers();
+        startRoundTimer();
+    }
 });
 
-/*EVENT LISTENER - PLAYER RETURNS ANSWER*/
-
-//NOTE: NEED TO DISABLE SO A NEW PROBLEM CANNOT BE GENERATED UNTIL START IS PRESSED
+/*SUBMIT ANSWER*/
 num3.addEventListener('keypress', function(e) {
     if (e.key === 'Enter'){
         userAnswer = answer.value;
-        parseInt(userAnswer) === value3? isCorrectArray.push(true) : isCorrectArray.push(false);
+        parseInt(userAnswer) === value3 ? isCorrectArray.push(true) : isCorrectArray.push(false);
         answerArray.push(userAnswer)
         answer.value = '';
         checkAnswer();
@@ -228,4 +297,16 @@ num3.addEventListener('keypress', function(e) {
         clearProblem();
         generateProblem();
     }
+});
+
+/*START A NEW GAME*/
+newGameButton.addEventListener("click", function(){
+    newGameButton.classList.add("hidden");
+    startButton.classList.remove("hidden");
+    timeRemaining.textContent = ``;
+    roundCountdownDiv.innerText = "";
+    roundNumber = 0;
+    points = 0;
+    playerScore.innerText = points;
+    round.innerText = roundNumber;
 });
