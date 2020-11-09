@@ -34,7 +34,7 @@ let value1,
 
     computerAnswer,
     userAnswer,
-    roundNumber = 6,
+    roundNumber = 0
     points = 0,
     timer = 31,
     roundCountdown = 3;
