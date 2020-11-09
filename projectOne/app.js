@@ -20,7 +20,20 @@ const num1 = document.getElementById('num1'),
       startButton = document.getElementById("start_button"),
       newGameButton = document.getElementById("newgame_button"),
 
-      maxPoints = 101;
+      settingsMinAddSub = document.getElementById("min_add_sub"),
+      settingsMaxAddSub = document.getElementById("max_add_sub"),
+      settingsMinMultDiv = document.getElementById("min_mult_div"),
+      settingsMaxMultDiv = document.getElementById("max_mult_div"),
+
+      settingsUpdateButton = document.getElementById("update_settings_button"),
+      settingsResetButton = document.getElementById("reset_settings_button"),
+      settingsUpdatedConfirmed = document.getElementById("settings_updated_confirmed"),
+
+      maxPoints = 101,
+      resetValueMinDifficultyLevelAddSub = 0,
+      resetValueMaxDifficultyLevelAddSub = 10,
+      resetValueMinDifficultyMultiplyDivide = 0,
+      resetValueMaxDifficultyMultiplyDivide = 6;
 
 let value1,
     value2,
@@ -34,7 +47,7 @@ let value1,
 
     computerAnswer,
     userAnswer,
-    roundNumber = 0
+    roundNumber = 0,
     points = 0,
     timer = 31,
     roundCountdown = 3;
@@ -127,6 +140,10 @@ const roundPicker = () => {
     } else if (roundNumber > 6) {
         return operatorArray[randy(0,4)]();
     }
+
+    // if (roundNumber === 50) {
+    //     return operatorArray[0, operatorArray.length](); // POSSIBLE SOLUTION TO CHOOSING WHICH OPERATIONS
+    // }
 }
 
 /*GENERATE A NEW PROBLEM FOR PLAYER */
@@ -310,3 +327,35 @@ newGameButton.addEventListener("click", function(){
     playerScore.innerText = points;
     round.innerText = roundNumber;
 });
+
+/*CUSTOME GAME SETTINGS*/
+
+settingsUpdateButton.addEventListener("click", function() {
+    minDifficultyLevelAddSub = parseInt(settingsMinAddSub.value);
+    maxDifficultyLevelAddSub = parseInt(settingsMaxAddSub.value);
+    minDifficultyMultiplyDivide = parseInt(settingsMinMultDiv.value);
+    maxDifficultyMultiplyDivide = parseInt(settingsMinMultDiv.value);
+   
+    settingsUpdatedConfirmed.textContent = "Settings Updated";
+});
+
+settingsResetButton.addEventListener("click", function() {
+    minDifficultyLevelAddSub = resetValueMinDifficultyLevelAddSub;
+    settingsMinAddSub.value = resetValueMinDifficultyLevelAddSub;
+    maxDifficultyLevelAddSub = resetValueMaxDifficultyLevelAddSub;
+    settingsMaxAddSub.value = resetValueMaxDifficultyLevelAddSub;
+    minDifficultyMultiplyDivide = resetValueMinDifficultyMultiplyDivide;
+    settingsMinMultDiv.value = resetValueMinDifficultyMultiplyDivide;
+    maxDifficultyMultiplyDivide = resetValueMaxDifficultyMultiplyDivide;
+    settingsMaxMultDiv.value = resetValueMaxDifficultyMultiplyDivide;
+
+    settingsUpdatedConfirmed.textContent = "Original Settings Restored";
+});
+
+settingsMinAddSub.addEventListener("input", function() {
+    if (settingsMinAddSub.value === '') {
+        settingsUpdateButton.disabled = true;
+    } else {
+        settingsUpdateButton.disabled = false;
+    }
+})
