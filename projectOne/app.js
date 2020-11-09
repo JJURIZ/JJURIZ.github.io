@@ -229,29 +229,3 @@ num3.addEventListener('keypress', function(e) {
         generateProblem();
     }
 });
-
-
-
-/* 
-Friday
---Win Conditions must be set. 
-    -Points? 
-    -Rounds?
-    -Points && Rounds?
---Display message (Round Over) DONE
---Display directions
---If user misses 50% of the current round problems cannot proceed. (either game over or user stuck at that level)
---Create array of all questions asked and whether they were answered correctly?
---Need a real style applied.
---README (screen cap winning)
-*/
-
-/*NICE TO HAVES*/
-/*
---Ideally there will be a 5 or 3 second countdown before starting.
---Allow player to choose Practice Mode in which they can select which operation 
-    they want to focus on. 
---Intro screen. Could just be HTML, could be an overlay with button (per CSS
-    Jonas course)
-
-*/
