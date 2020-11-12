@@ -7,20 +7,30 @@ let currentValue = document.getElementById("current_value"),
 incrementValue.addEventListener("click", function(){
    let num1 = convertCurrentValueToInt(currentValue);
    let num2 = convertUserValueToInt(inputValue);
-    currentValue.textContent = num1 + num2;
+   currentValue.textContent = num1 + num2;
+   if (currentValue.textContent < 0) {
+    currentValue.style.color = "red"
+} else (
+    currentValue.style.color = "black"
+)
 })
 
 decrementValue.addEventListener("click", function(){
    let num1 = convertCurrentValueToInt(currentValue);
    let num2 = convertUserValueToInt(inputValue);
     currentValue.textContent = num1 - num2;
+    if (currentValue.textContent < 0) {
+        currentValue.style.color = "red"
+    } else (
+        currentValue.style.color = "black"
+    )
 })
-
 
 const convertCurrentValueToInt = (num) => {
     let strValue = num.textContent;
-    let intValue = parseInt(strValue);  
+    let intValue = parseInt(strValue); 
     return intValue;
+ 
 }
 
 const convertUserValueToInt = (num) => {
@@ -28,4 +38,3 @@ const convertUserValueToInt = (num) => {
     let intValue = parseInt(strValue);    
     return intValue;
 }
-
