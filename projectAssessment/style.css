@@ -25,6 +25,7 @@ button {
     font-size: 4rem;
     background-color: #A9A9A9;
     color: white;
+    outline: none;
 }
 
 button:hover {
