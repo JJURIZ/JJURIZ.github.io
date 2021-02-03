@@ -1,0 +1,308 @@
+/* PAGE RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%; /* 1rem = 10px; 10px/16px = 62.5% */
+    font-family: 'Lato', sans-serif;
+    color: #073B4C;
+}
+
+a {
+    color: black;
+}
+
+/* PAGE NAVIGATION */
+.nav-home {
+    height: 10vh;
+}
+
+.nav-link {
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #EF476F;
+    border-bottom: 2px solid #EF476F;
+}
+
+.nav-left {
+    margin-top: 1rem;
+    float: left;
+}
+
+.nav-right {
+    margin-top: 1rem;
+    float: right;
+}
+
+.nav-left a:first-child{
+    transition: .1s;
+    margin-left: 1rem;
+}
+
+.nav-right a {
+    transition: .1s;
+    margin: 0 1rem 0 1rem;
+}
+
+/* HEADER */
+.header {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #FFD166;
+}
+
+.header-title {
+    font-size: 5rem;
+    letter-spacing: .5rem;
+}
+
+.header-subtitle {
+    font-size: 2rem;
+    letter-spacing: .3rem;
+}
+
+/* .main {
+    
+} */
+/* ABOUT */
+.section-about {
+    height: 100vh;
+    display: flex;
+    /* display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 30rem 10rem 30rem; */
+    justify-content: center;
+    align-items: center;
+}
+
+.section-about-profile {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100%;
+    /* grid-row-start: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+    width: 75vw;
+}
+
+.section-about-profile-img-container {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.section-about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-about-profile-text {
+    grid-column-start: 2;
+    grid-row-start: 1; 
+}
+
+.section-about-title {
+    font-size: 2rem;
+    margin: 0 0 2rem 2rem;
+}
+
+.section-about-bio {
+    font-size: 1.5rem;
+    margin: 0 0 2rem 2rem;
+}
+
+.section-about-bio.last {
+    margin-bottom: 4rem;
+}
+
+.section-about-profile-pic {
+    height: 300px;
+    width: auto;
+}
+
+.section-about-skills-container {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50vw;
+}
+
+.section-about-skills-container h1 {
+    font-size: 2rem;
+}
+
+.section-about-skills-col-1,
+.section-about-skills-col-2,
+.section-about-skills-col-3,
+.section-about-skills-col-4 {
+    text-align: center;
+    margin: 0 1rem 0 1rem;
+}
+
+/* PROJECTS */
+
+.section-projects {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EF476F;
+}
+
+.section-projects-header {
+    font-size: 3.5rem
+}
+
+hr {
+    width: 6rem;
+    color: black;
+    margin: 1rem 0 1rem 0;
+}
+
+.section-projects-thumbnails {
+    width: 65vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+
+.section-projects-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.project-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 90%;
+    height: 50%;
+    margin: 0 .5rem 0 .5rem;
+}
+
+.section-projects-project.math-matic {
+    background: linear-gradient(to bottom right, rgba(245, 246, 252, 0.52), rgba(0, 0, 0, 0.73)),url('./images/MathMatic.png') no-repeat;
+    background-size: 125%;
+    background-position: 50% 50%;
+    margin: 1rem;
+
+}
+
+.section-projects-project.hiits {
+    background: linear-gradient(to bottom left, rgba(245, 246, 252, 0.52), rgba(0, 0, 0, 0.73)),url('./images/HIITS.png') no-repeat;
+    background-size: 125%;
+    background-position: 50% 50%;
+    margin: 1rem;
+}
+
+.section-projects-project.kaleidoscope {
+    background: linear-gradient(to bottom right, rgba(245, 246, 252, 0.52), rgba(0, 0, 0, 0.73)),url('./images/Kaleidoscope.png') no-repeat;
+    background-size: 125%;
+    background-position: 50% 50%;
+    margin: 1rem;
+}
+
+.section-projects-project.nuer-art {
+    background: linear-gradient(to bottom left, rgba(245, 246, 252, 0.52), rgba(0, 0, 0, 0.73)),url('./images/NuerArt.png') no-repeat;
+    background-size: 125%;
+    background-position: 50% 50%;
+    margin: 1rem;
+}
+
+.section-projects-project {
+    transition: all 2s;
+    display: flex;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow:2px 4px 4px 1px rgba(0,0,0, .3);
+}
+
+.section-projects-project:hover {
+    background-position: 50% 50%;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+/* SKILLS */
+.section-about-skills-list-items {
+    font-size: 2.5rem;
+}
+
+.section-about-skills-list-items li {
+    font-size: 1.5rem;
+    list-style: none;
+}
+
+.project-text-main {
+    font-size: 4rem;
+    color: #FFD166;
+    text-shadow: 3px 2px 6px #000000;
+}
+
+.project-text-sub {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 3px 2px 6px #000000;
+}
+
+footer {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    height: 10vh;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.footer-header {
+    font-size: 2.5rem;
+    width: 100%;
+    margin: 1rem 0 1rem 0;
+}
+
+.footer-label {
+    display: inline-block;
+}
+
+.footer-label a{
+    text-decoration: none;
+}
+
+.footer-link {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.footer-link:hover {
+    color: #EF476F;
+    transition: .1s;
+    border-bottom: 2px solid #EF476F;
+}
+
+.svg-inline--fa {
+    margin: 0 1rem 0 1rem;
+}
