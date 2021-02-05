@@ -304,13 +304,14 @@ footer {
 }
 
 
-/* MathMatic */
+/* Project Pages */
 
 .nav-arrow {
     font-size: 4rem;
     position: fixed;
     top: 50vh;
 }
+
 
 .nav-arrow.left {
     left: 2rem;
@@ -357,8 +358,15 @@ h5 {
 .project-link {
     text-decoration: none;
     transition: all 1s;
-    color: green;
+    color: #073B4C;
     font-size: 1.7rem;
+    border-radius: .5rem;
+    transition: all .2s;
+}
+
+.project-link:hover {
+    background-color: #073B4C;
+    color: white;
 }
 
 .project-description {
