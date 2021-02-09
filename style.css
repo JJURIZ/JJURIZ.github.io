@@ -428,16 +428,22 @@ i {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: -1rem;
     }
 
     .section-about-profile-pic {
         width: 25rem;
         height: 25rem;
+
     }
 
     .section-projects-thumbnails {
         display: flex;
         flex-direction: column;
+    }
+
+    .section-about {
+        height: 120vh;
     }
 
     .section-about-bio {
@@ -453,6 +459,15 @@ i {
         font-size: 1.25rem;
     }
 
+    .section-projects {
+        height: 80vh;
+    }
+
+    .section-projects-container {
+        height: 80vh;
+        margin-top: 5rem;
+    }
+
     .section-projects-header {
         font-size: 2.5rem;
     }
@@ -460,7 +475,6 @@ i {
     .section-projects-project {
         height: 20rem;
         width: 60vw;
-
     }
 
     .project-text-main {
