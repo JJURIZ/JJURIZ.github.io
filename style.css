@@ -13,14 +13,10 @@ a {
     text-decoration: none;
 }
 
-body {
-    background-color: #FAF3F0;
-}
-
 /* PAGE NAVIGATION */
 .nav-home {
     height: 10vh;
-    background-color: #FAF3F0;
+    background-color: #FFF;
 }
 
 .nav-link {
@@ -29,17 +25,17 @@ body {
 }
 
 .nav-link:hover {
-    color: #3820E9;
-    border-bottom: 2px solid #3820E9;
+    color: #324E59;
+    border-bottom: 2px solid #324E59;
 }
 
 .nav-left {
-    margin-top: 1rem;
+    margin-top: 3vh;
     float: left;
 }
 
 .nav-right {
-    margin-top: 1rem;
+    margin-top: 3vh;
     float: right;
 }
 
@@ -62,34 +58,32 @@ body {
     align-items: center;
     text-transform: uppercase;
     text-align: center;
-    background-color: #957FEF;
+    background-color: #324E59;
 }
 
 .header-title {
     font-size: 10rem;
     letter-spacing: .5rem;
-    color: #EFD9CE;
+    color: #FFF;
     text-shadow: 3px 2px 6px #000;
 }
 
 .header-subtitle {
     font-size: 4rem;
     letter-spacing: .3rem;
-    color: #EFD9CE;
+    color: #FFF;
     text-shadow: 3px 2px 6px #000;
 
 }
 
-/* .main {
-    
-} */
+
 /* ABOUT */
 .section-about {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FAF3F0;
+    background-color: #FFF;
 }
 
 .section-about-profile {
@@ -162,11 +156,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #DEC0F1;
+    background-color: #324E59;
 }
 
 .section-projects-header {
-    font-size: 3.5rem
+    font-size: 3.5rem;
+    color: #FFF;
+    text-shadow: 3px 2px 6px #000;
 }
 
 hr {
@@ -183,7 +179,6 @@ hr {
     grid-template-rows: 1fr 1fr;
 
 }
-
 
 .section-projects-project {
     display: flex;
@@ -257,13 +252,13 @@ hr {
 
 .project-text-main {
     font-size: 4rem;
-    color: #FAF3F0;
+    color: #D9BEA7;
     text-shadow: 3px 2px 6px #000;
 }
 
 .project-text-sub {
     font-size: 2.5rem;
-    color: #FAF3F0;
+    color: #FFF;
     text-shadow: 3px 2px 6px #000;
 }
 
@@ -273,7 +268,7 @@ footer {
     text-align: center;
     height: 10vh;
     width: 100%;
-    background-color: #FAF3F0;
+    background-color: #FFF;
 }
 
 .footer-content {
@@ -301,9 +296,9 @@ footer {
 }
 
 .footer-link:hover {
-    color: #3820E9;
+    color: #324E59;
     transition: .1s;
-    border-bottom: 2px solid #3820E9;
+    border-bottom: 2px solid #324E59;
 }
 
 .svg-inline--fa {
@@ -319,7 +314,6 @@ footer {
     top: 50vh;
 }
 
-
 .nav-arrow.left {
     left: 2rem;
 }
@@ -332,7 +326,7 @@ footer {
     padding: 2rem;
     margin: 0 auto;
     max-width: 100rem;
-    background-color: #FAF3F0;
+    background-color: #FFF;
 }
 
 .title {
@@ -342,7 +336,6 @@ footer {
 .title-subtitle {
     font-size: 2rem;
     line-height: 3rem;
-
 }
 
 b {
@@ -359,21 +352,21 @@ h5 {
     display: inline-block;
     padding: 1.2rem;
     width: 11rem;
-    border: 2px solid #3820E9;
+    border: 2px solid #324E59;
     margin: 0 1rem 3rem 0;
 }
 
 .project-link {
     text-decoration: none;
     transition: all 1s;
-    color: #3820E9;
+    color: #324E59;
     font-size: 1.7rem;
     border-radius: .5rem;
     transition: all .2s;
 }
 
 .project-link:hover {
-    background-color: #3820E9;
+    background-color: #324E59;
     color: white;
 }
 
@@ -390,6 +383,7 @@ i {
     margin-top: 2rem;
     width: 100rem;
     height: auto;
+    box-shadow: 3px 2px 6px #000;
 }
 
 .team-link {
@@ -399,5 +393,5 @@ i {
 }
 
 .team-link:hover {
-    color: #3820E9;
+    color: #324E59;
 }
