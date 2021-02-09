@@ -395,3 +395,87 @@ i {
 .team-link:hover {
     color: #324E59;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 430px) {
+
+    .nav-link {
+        font-size: 2.5rem;
+    }
+
+    .header {
+       display: flex;
+       height: 60vh;
+       width: 100vw;
+       justify-content: center;
+       align-items: center;
+       margin-top: 5rem;
+    }
+
+    .header-title {
+        display: inline-block;
+        /* text-align: center; */
+        font-size: 4rem;
+    }
+
+    .header-subtitle {
+        font-size: 2rem;
+    }
+
+    .section-about-profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-about-profile-pic {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .section-projects-thumbnails {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-about-bio {
+        font-size: 1.25rem;
+        margin: .5rem 0 .5rem 0;
+    }
+
+    .section-about-skills-container h1 {
+        font-size: 1.25rem;
+    }
+
+    .section-about-skills-list-items li {
+        font-size: 1.25rem;
+    }
+
+    .section-projects-header {
+        font-size: 2.5rem;
+    }
+
+    .section-projects-project {
+        height: 20rem;
+        width: 60vw;
+
+    }
+
+    .project-text-main {
+        font-size: 2rem;
+    }
+
+    .project-text-sub {
+        font-size: 1.5rem;
+    }
+
+    .footer-header {
+        font-size: 2rem;
+    }
+    .footer-link {
+        font-size: 1.25rem;
+    }
+
+}
