@@ -8,6 +8,10 @@
     color: #000;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     color: black;
     text-decoration: none;
@@ -443,7 +447,7 @@ i {
     }
 
     .section-about {
-        height: 120vh;
+        height: 140vh;
     }
 
     .section-about-bio {
@@ -460,12 +464,12 @@ i {
     }
 
     .section-projects {
-        height: 80vh;
+        height: 100vh;
     }
 
     .section-projects-container {
         height: 80vh;
-        margin-top: 5rem;
+        margin-top: -3rem;
     }
 
     .section-projects-header {
@@ -549,4 +553,31 @@ i {
     }
 }
 
+@media screen and (max-width: 1440px) {
+    .section-about-profile-pic {
+        height: 200px;
+        width: 200px;
+    }
+}
 
+@media screen and (max-width: 880px) {
+    .section-about-profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-about-profile-pic {
+        margin-bottom: 5rem;
+    }
+
+    .project-page-main {
+        padding: 3rem;
+        width: 65vw;
+    }
+
+    .portfolio-details-image {
+        width: 100%;
+    }
+
+}
