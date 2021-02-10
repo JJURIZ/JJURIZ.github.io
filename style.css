@@ -581,3 +581,36 @@ i {
     }
 
 }
+
+@media screen and (max-width: 880px) and (max-height: 500px) {
+
+.header {
+    width: 100vw;
+    display: inline-block;
+}
+
+.section-about-profile-pic {
+    width: 15rem;
+    height: 15rem;
+}
+
+.section-about {
+    width: 100vw;
+    height: 200vh;
+}
+
+.section-projects {
+    height: 300%;
+}
+
+.section-projects-thumbnails {
+    height: 100vh;
+}
+
+.footer-label{
+    margin-bottom: 5rem;
+}
+}
+
+
+
