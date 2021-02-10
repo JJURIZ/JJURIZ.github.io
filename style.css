@@ -582,6 +582,7 @@ i {
 
 }
 
+/* iPhone X */
 @media screen and (max-width: 880px) and (max-height: 500px) {
 
 .header {
@@ -612,6 +613,7 @@ i {
 }
 }
 
+/* iPhone 5/6/7, Surface Duo, Pixel 2 */
 @media screen and (max-width: 700px) and (max-height: 725px) {
 
     .header {
