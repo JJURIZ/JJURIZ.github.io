@@ -612,5 +612,61 @@ i {
 }
 }
 
+@media screen and (max-width: 700px) and (max-height: 725px) {
+
+    .header {
+        height: 90vh;
+    }
+
+    .header-title {
+        font-size: 6rem;
+    }
+
+    .header-container {
+        margin-top: 3rem;
+    }
+
+    .header-subtitle {
+        font-size: 4rem;
+    }
+
+    .section-about {
+        width: 100vw;
+        height: 300vh;
+    }
+
+    .section-projects {
+        height: 300%;
+        padding: 3rem 0 15rem 0;
+    }
+
+    .section-projects-container {
+        width: 80vw;
+    }
+    
+    .section-projects-project {
+        height: 200px;
+        width: 200px;
+    }
+    
+    .project-text-main {
+        font-size: 2rem;
+    }
+
+    .project-text-sub {
+        font-size: 1.5rem;
+    }
+
+    .section-projects-thumbnails {
+        height: 100vh;
+    }
+    
+    .footer-link {
+        font-size: 1.5rem
+    }
+    
+
+    }
+
 
 
