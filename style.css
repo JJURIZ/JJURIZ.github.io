@@ -20,7 +20,8 @@ a {
 /* PAGE NAVIGATION */
 .nav-home {
     height: 10vh;
-    background-color: #FFF;
+    width: 100%;
+    background-color: #EEF5DB;
 }
 
 .nav-link {
@@ -29,17 +30,17 @@ a {
 }
 
 .nav-link:hover {
-    color: #324E59;
-    border-bottom: 2px solid #324E59;
+    color: #FE5F55;
+    border-bottom: 2px solid #FE5F55;
 }
 
 .nav-left {
-    margin-top: 3vh;
+    padding-top: 3vh;
     float: left;
 }
 
 .nav-right {
-    margin-top: 3vh;
+    padding-top: 3vh;
     float: right;
 }
 
@@ -50,7 +51,7 @@ a {
 
 .nav-right a {
     transition: .1s;
-    margin: 0 1rem 0 1rem;
+    padding: 0 1rem 0 1rem;
 }
 
 /* HEADER */
@@ -62,24 +63,22 @@ a {
     align-items: center;
     text-transform: uppercase;
     text-align: center;
-    background-color: #324E59;
+    background-color: #B8D8D8;
 }
 
 .header-title {
     font-size: 10rem;
     letter-spacing: .5rem;
-    color: #FFF;
-    text-shadow: 3px 2px 6px #000;
+    color: #4F6367;
+    text-shadow: 3px 2px 6px #EEF5DB;
 }
 
 .header-subtitle {
     font-size: 4rem;
     letter-spacing: .3rem;
-    color: #FFF;
-    text-shadow: 3px 2px 6px #000;
-
+    color: #7A9E9F;
+    text-shadow: 3px 2px 6px #EEF5DB;
 }
-
 
 /* ABOUT */
 .section-about {
@@ -87,7 +86,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FFF;
+    background-color: #EEF5DB;
 }
 
 .section-about-profile {
@@ -160,13 +159,13 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #324E59;
+    background-color: #B8D8D8;
 }
 
 .section-projects-header {
     font-size: 3.5rem;
-    color: #FFF;
-    text-shadow: 3px 2px 6px #000;
+    color: #4F6367;
+    text-shadow: 3px 2px 6px #EEF5DB;
 }
 
 hr {
@@ -256,7 +255,7 @@ hr {
 
 .project-text-main {
     font-size: 4rem;
-    color: #D9BEA7;
+    color: #EEF5DB;
     text-shadow: 3px 2px 6px #000;
 }
 
@@ -270,20 +269,21 @@ footer {
     position: absolute;
     display: inline-block;
     text-align: center;
-    height: 10vh;
     width: 100%;
-    background-color: #FFF;
+    background-color: #EEF5DB;
 }
 
 .footer-content {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: inline-block;
+    background-color: #EEF5DB;
+
 }
 
 .footer-header {
     font-size: 2.5rem;
     width: 100%;
-    margin: 1rem 0 1rem 0;
+    padding: 1rem 0 1rem 0;
 }
 
 .footer-label {
@@ -296,13 +296,13 @@ footer {
 
 .footer-link {
     font-size: 2rem;
-    margin: 1rem;
+    padding: 1rem;
 }
 
 .footer-link:hover {
-    color: #324E59;
+    color: #FE5F55;
     transition: .1s;
-    border-bottom: 2px solid #324E59;
+    border-bottom: 2px solid #FE5F55;
 }
 
 .svg-inline--fa {
@@ -311,7 +311,6 @@ footer {
 
 
 /* Project Pages */
-
 .nav-arrow {
     font-size: 4rem;
     position: fixed;
@@ -326,11 +325,15 @@ footer {
     right: 2rem;
 }
 
+.project-body {
+    background-color: #B8D8D8;
+}
+
 .project-page-main {
     padding: 2rem;
     margin: 0 auto;
     max-width: 100rem;
-    background-color: #FFF;
+    background-color: #B8D8D8;
 }
 
 .title {
@@ -356,22 +359,24 @@ h5 {
     display: inline-block;
     padding: 1.2rem;
     width: 11rem;
-    border: 2px solid #324E59;
+    /* border: 2px solid #4F6367; */
     margin: 0 1rem 3rem 0;
+    background-color: #4F6367;
+    color: #EEF5DB;
 }
 
 .project-link {
     text-decoration: none;
     transition: all 1s;
-    color: #324E59;
+    color: #4F6367;
     font-size: 1.7rem;
     border-radius: .5rem;
     transition: all .2s;
 }
 
 .project-link:hover {
-    background-color: #324E59;
-    color: white;
+    background-color: #FE5F55;
+    color: #EEF5DB;
 }
 
 .project-description {
@@ -391,7 +396,7 @@ i {
 }
 
 .team-link {
-    color: green;
+    color: #4F6367;
     font-size: 2rem;
     transition: all .1s;
 }
