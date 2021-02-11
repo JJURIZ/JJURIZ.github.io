@@ -408,15 +408,19 @@ i {
 
 /* Media Queries */
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 520px) {
 
+    body {
+    background-color: #B8D8D8;
+
+    }
     .nav-link {
         font-size: 2.5rem;
     }
 
     .header {
        display: flex;
-       height: 60vh;
+       height: 40vh;
        width: 100vw;
        justify-content: center;
        align-items: center;
@@ -450,6 +454,8 @@ i {
     .section-projects-thumbnails {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .section-about {
@@ -559,13 +565,6 @@ i {
     }
 }
 
-@media screen and (max-width: 1440px) {
-    .section-about-profile-pic {
-        height: 200px;
-        width: 200px;
-    }
-}
-
 @media screen and (max-width: 880px) {
     .section-about-profile {
         display: flex;
@@ -591,32 +590,32 @@ i {
 /* iPhone X */
 @media screen and (max-width: 880px) and (max-height: 500px) {
 
-.header {
-    width: 100vw;
-    display: inline-block;
-}
-
-.section-about-profile-pic {
-    width: 15rem;
-    height: 15rem;
-}
-
-.section-about {
-    width: 100vw;
-    height: 200vh;
-}
-
-.section-projects {
-    height: 300%;
-}
-
-.section-projects-thumbnails {
-    height: 100vh;
-}
-
-.footer-label{
-    margin-bottom: 5rem;
-}
+    .header {
+        width: 100vw;
+        display: inline-block;
+    }
+    
+    .section-about-profile-pic {
+        width: 15rem;
+        height: 15rem;
+    }
+    
+    .section-about {
+        width: 100vw;
+        height: 200vh;
+    }
+    
+    .section-projects {
+        height: 300%;
+    }
+    
+    .section-projects-thumbnails {
+        height: 100vh;
+    }
+    
+    .footer-label{
+        margin-bottom: 5rem;
+    }
 }
 
 /* iPhone 5/6/7, Surface Duo, Pixel 2 */
@@ -668,14 +667,27 @@ i {
 
     .section-projects-thumbnails {
         height: 100vh;
+        width: 100%;
     }
 
     .footer-link {
         font-size: 1.5rem
     }
-    
+}
 
+/* iPad and small monitors */
+@media screen and (max-width: 1440px) {
+    .section-about-profile-pic {
+        height: 200px;
+        width: 200px;
     }
+}
+
+
+
+
+
+
 
 
 
