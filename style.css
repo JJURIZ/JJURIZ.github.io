@@ -271,6 +271,7 @@ footer {
     text-align: center;
     width: 100%;
     background-color: #EEF5DB;
+    padding-bottom: 2rem;
 }
 
 .footer-content {
@@ -639,16 +640,17 @@ i {
 
     .section-about {
         width: 100vw;
-        height: 300vh;
+        height: 150vh;
     }
 
     .section-projects {
-        height: 300%;
-        padding: 3rem 0 15rem 0;
+        height: 130vh;
+        padding: 0 0 15rem 0;
+        text-align: center;
     }
 
     .section-projects-container {
-        width: 80vw;
+        height: 100vh;
     }
     
     .section-projects-project {
@@ -667,7 +669,7 @@ i {
     .section-projects-thumbnails {
         height: 100vh;
     }
-    
+
     .footer-link {
         font-size: 1.5rem
     }
